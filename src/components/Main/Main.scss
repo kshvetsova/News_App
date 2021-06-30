@@ -1,0 +1,16 @@
+@import "../styles/main";
+
+.Main {
+  margin-bottom: 80px;
+  margin-top: 100px;
+  z-index: 2;
+  background: $backgroundColor;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media (max-width: $breakPointMobile) {
+  .Main {
+    margin-top: 90px;
+  }
+}

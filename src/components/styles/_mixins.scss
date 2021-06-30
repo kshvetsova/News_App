@@ -1,0 +1,16 @@
+@mixin fontSize($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin imageBackground($url) {
+  background-image: $url;
+  background-color: $backgroundColor;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin linkSize($sizeW, $sizeH) {
+  width: $sizeW;
+  height: $sizeH;
+}

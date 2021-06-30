@@ -1,0 +1,223 @@
+@import "../styles/main";
+
+.HomePage {
+  &-Container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: $gapNews;
+    padding-bottom: 100px;
+    z-index: 2;
+  }
+}
+
+.Preview {
+  height: 300px;
+  display: flex;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $previewColor;
+  box-shadow: 0 5px 4px 0 #dddddd40;
+  border-radius: 4px;
+  margin-bottom: $gapNews;
+
+  &-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4%;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  &-Title {
+    align-self: flex-start;
+    @include fontSize(25px, 700);
+    color: $titleColor;
+    text-align: left;
+  }
+
+  &-Description {
+    display: flex;
+    text-align: left;
+    @include fontSize(14px, 400);
+    color: $contentColor;
+    box-sizing: content-box;
+    min-height: 50px;
+    padding: 20px 0;
+  }
+
+  &-Read {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-Date {
+    @include fontSize(12px, 400);
+    color: $contentColor;
+  }
+
+  &-Button {
+    align-items: flex-end;
+    @include fontSize(12px, 700);
+    color: $titleColor;
+    background: none;
+    transition: all 0.3s;
+    &:hover {
+      color: $activeColor;
+      transform: scale(1.2);
+    }
+  }
+
+  &-Image {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid $previewColor;
+  }
+
+  .image-preview {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.News {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $borderColor;
+  box-shadow: 0 4px 4px 0 #c0bdbd40;
+  border-radius: 4px;
+  width: 300px;
+  transition: transform 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  &-Title {
+    display: flex;
+    flex-direction: column;
+    @include fontSize(20px, 700);
+    color: $titleColor;
+    background: none;
+    align-items: flex-start;
+    text-align: left;
+    height: 90px;
+  }
+
+  &-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6%;
+    text-align: left;
+  }
+
+  &-Description {
+    @include fontSize(14px, 400);
+    color: $contentColor;
+    height: 90px;
+  }
+
+  &-Image {
+    width: 100%;
+    height: 179px;
+    border-bottom: 1px solid $borderColor;
+    border-left: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .image-news {
+    width: 100%;
+    height: 179px;
+  }
+
+  &-Date {
+    @include fontSize(12px, 400);
+    color: $contentColor;
+  }
+
+  &-Button {
+    @include fontSize(12px, 700);
+    box-sizing: content-box;
+    color: $titleColor;
+    background: none;
+    align-items: center;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $activeColor;
+    }
+  }
+
+  &-Read {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1089px) {
+  .HomePage-Container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: $breakPointTablet) {
+  .Preview {
+    &-Content {
+      padding: 3%;
+    }
+
+    &-Description {
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .Preview {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-bottom: $gapSize;
+
+    &-Image {
+      border-left: none;
+      border-bottom: 1px solid $previewColor;
+      order: -1;
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+    }
+
+    .image-preview {
+      border-bottom-right-radius: none;
+      border-top-left-radius: 3px;
+    }
+
+    &-Content {
+      width: 100%;
+      padding: 4%;
+    }
+
+    &-Title {
+      @include fontSize(22px, 700);
+    }
+
+    &-Description {
+      padding: 20px 0;
+    }
+  }
+
+  .HomePage-Container {
+    padding-bottom: 90px;
+    gap: $gapSize;
+  }
+}

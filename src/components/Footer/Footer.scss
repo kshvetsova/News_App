@@ -1,0 +1,74 @@
+@import "../styles/main";
+
+.Footer {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #e8e8e8;
+  padding-left: $gapContainer;
+  padding-right: $gapContainer;
+  bottom: 0;
+  z-index: -1;
+
+  &-Copyright {
+    white-space: nowrap;
+    @include fontSize(16px, 400);
+  }
+
+  &-Socials {
+    display: flex;
+  }
+
+  &-Instagram {
+    @include imageBackground(url("../images/instagram.svg"));
+    transition: all 0.3s;
+    &:hover {
+      background-image: url("../images/instagram-hover.svg");
+      transform: scale(1.2);
+    }
+  }
+
+  &-Twitter {
+    @include imageBackground(url("../images/twitter.svg"));
+    transition: all 0.3s;
+    &:hover {
+      background-image: url("../images/twitter-hover.svg");
+      transform: scale(1.2);
+    }
+  }
+
+  &-LinkedIn {
+    @include imageBackground(url("../images/linkedin.svg"));
+    transition: all 0.3s;
+
+    &:hover {
+      background-image: url("../images/linkedin-hover.svg");
+      transform: scale(1.2);
+    }
+  }
+}
+
+.socials {
+  @include linkSize(20px, 18px);
+  margin-left: $gapSize;
+}
+
+@media (max-width: $breakPointMobile) {
+  .Footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    &-Copyright {
+      @include fontSize(13px, 400);
+      padding-top: 10px;
+    }
+
+    &-Instagram {
+      margin-left: 0;
+    }
+  }
+}

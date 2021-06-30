@@ -1,0 +1,40 @@
+@import "../styles/main";
+
+.Categories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  height: 113px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 (#bdbdbd);
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  position: absolute;
+  left: -99%;
+  top: 190%;
+
+  @media (max-width: $breakPointMobile) {
+    top: 170%;
+  }
+
+  &-Item {
+    margin-bottom: 5px;
+  }
+
+  &-Link {
+    @include fontSize(14px, 600);
+    background: none;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      @include fontSize(14px, 700);
+    }
+  }
+}
+
+.is_active {
+  color: $activeColor;
+  @include fontSize(14px, 600);
+}
