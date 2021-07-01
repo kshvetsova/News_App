@@ -15,4 +15,3 @@ Tech stack:
 - Fetch, API
 
 [DEMO LINK](https://kshvetsova.github.io/News_App/)
-
