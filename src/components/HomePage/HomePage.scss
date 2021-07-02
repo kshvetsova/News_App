@@ -57,8 +57,7 @@
   &-Date {
     @include fontSize(12px, 400);
     color: $contentColor;
-    width: 50%;
-    flex-wrap: nowrap;
+    white-space: nowrap;
   }
 
   &-Button {
@@ -144,8 +143,7 @@
   &-Date {
     @include fontSize(12px, 400);
     color: $contentColor;
-    flex-wrap: nowrap;
-    width: 50%;
+    white-space: nowrap;
   }
 
   &-Button {
