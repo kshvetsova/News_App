@@ -60,10 +60,7 @@
   }
 
   &-Source {
-    // display: flex;
-    // width: 70%;
     flex-wrap: wrap;
-    // margin-right: 30px;
     @include fontSize(18px, 700);
     color: $titleColor;
   }

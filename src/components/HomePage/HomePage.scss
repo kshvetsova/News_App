@@ -142,6 +142,7 @@
   &-Date {
     @include fontSize(12px, 400);
     color: $contentColor;
+    white-space: nowrap;
   }
 
   &-Button {
