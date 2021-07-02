@@ -180,6 +180,10 @@
     &-Description {
       padding: 10px 0;
     }
+
+    &-Date {
+      flex-wrap: nowrap;
+    }
   }
 }
 
@@ -195,13 +199,15 @@
       border-bottom: 1px solid $previewColor;
       order: -1;
       width: 100%;
-      height: auto;
       max-height: 250px;
+      height: auto;
     }
 
     .image-preview {
       border-bottom-right-radius: none;
       border-top-left-radius: 3px;
+      max-height: 250px;
+      height: auto;
     }
 
     &-Content {
