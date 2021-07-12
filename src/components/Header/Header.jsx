@@ -98,7 +98,7 @@ export const Header = () => {
           className={classNames('Header-Logo', {
             logo_visible: !menu,
           })}
-          href="#/home"
+          href="/#/"
         >
           News App
         </a>
