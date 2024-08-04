@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/News_App/static/css/main.d0025081.css",
+    "main.js": "/News_App/static/js/main.7e4df5ae.js",
+    "static/media/twitter-hover.svg": "/News_App/static/media/twitter-hover.3d58f65a585b4ae661e3.svg",
+    "static/media/twitter.svg": "/News_App/static/media/twitter.ca5331c4f0114ec534f3.svg",
+    "static/media/linkedin-hover.svg": "/News_App/static/media/linkedin-hover.170fb035adc6b7832be3.svg",
+    "static/media/linkedin.svg": "/News_App/static/media/linkedin.db52e63b482919529df2.svg",
+    "static/media/instagram-hover.svg": "/News_App/static/media/instagram-hover.ffce26a94e290e544f39.svg",
+    "index.html": "/News_App/index.html",
+    "static/media/instagram.svg": "/News_App/static/media/instagram.32389a176fdc95b119ea.svg",
+    "static/media/scroll-top-mobile.svg": "/News_App/static/media/scroll-top-mobile.277ad9a5ea2b02b3282b.svg",
+    "static/media/scroll-top-tablet.svg": "/News_App/static/media/scroll-top-tablet.1259b54a83e0f8339ce2.svg",
+    "static/media/scroll-top.svg": "/News_App/static/media/scroll-top.16e861d996c79b64b45e.svg",
+    "static/media/search.svg": "/News_App/static/media/search.ff44542753e182221e17.svg",
+    "static/media/menu-close-hover.svg": "/News_App/static/media/menu-close-hover.39a5bda1890d210225be.svg",
+    "static/media/menu-close.svg": "/News_App/static/media/menu-close.4e066aa878407d5da6f2.svg",
+    "static/media/search-close.svg": "/News_App/static/media/search-close.288e7e3629d427f004ba.svg",
+    "static/media/menu-open-hover.svg": "/News_App/static/media/menu-open-hover.36ae5fe5284dfe651ffc.svg",
+    "static/media/menu-open.svg": "/News_App/static/media/menu-open.24cc56cde1faa07317d8.svg",
+    "main.d0025081.css.map": "/News_App/static/css/main.d0025081.css.map",
+    "main.7e4df5ae.js.map": "/News_App/static/js/main.7e4df5ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0025081.css",
+    "static/js/main.7e4df5ae.js"
+  ]
+}
