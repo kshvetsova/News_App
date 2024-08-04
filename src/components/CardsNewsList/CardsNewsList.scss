@@ -1,0 +1,17 @@
+@import "./../styles/main.scss";
+
+.CardsNewsList {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 30px;
+  
+  @media(min-width: $min-width-tablet) {
+    column-gap: 40px;
+  }
+
+  @media(min-width: $min-width-desktop) {
+    column-gap: 60px;
+  }
+}

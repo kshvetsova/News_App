@@ -1,0 +1,53 @@
+@import "./../styles/main.scss";
+
+.NewsApp {
+  &-Header {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+  }
+
+  &-Main {
+    min-height: setMinHightMain($hight-footer-mob, $hight-header-mob);
+
+    @include minHightMain;
+    position: relative;
+    z-index: 2;
+    background-color: #fafbfc;
+    padding-block: 30px 60px;
+    padding-inline: $padding-inline-mobile;
+
+    @media(min-width: $min-width-tablet) {
+      padding-block: 40px 60px;
+      padding-inline: $padding-inline-tablet;
+    }
+
+    @media(min-width: $min-width-laptop) {
+      padding: $padding-inline-desktop;
+    }
+
+    &_detail {
+      min-height: setMinHightMain($hight-footer-mob, $hight-header-detail-mob);
+
+      @include minHightMain;
+    }
+
+  }
+
+  &-Footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.text {
+  @include fontSize(16px, 400, 19.36px);
+  color: $color-text;
+}
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+@import "./../styles/main.scss";
+
+.Detail {
+  &-ImageContainer {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $min-width-tablet) {
+      padding-bottom: 45%;
+    }
+
+    @media (min-width: $min-width-laptop) {
+      padding-bottom: 38%;
+    }
+  }
+
+  &-Image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    @media (min-width: $min-width-laptop) {
+      object-position: center top;
+    }
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &-Title {
+    @include fontSize(20px, 700, 24.2px);
+    color: $color-title;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    @media (min-width: $min-width-tablet) {
+      @include fontSize(30px, 700, 36.31px);
+      margin-top: 45px;
+    }
+
+    @media (min-width: $min-width-laptop) {
+      @include fontSize(45px, 700, 54.46px);
+      margin-top: 60px;
+    }
+  }
+
+  &-Info {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include fontSize(16px, 700, 19.36px);
+
+    @media (min-width: $min-width-tablet) {
+      @include fontSize(18px, 700, 22px);
+      padding-bottom: 37px;
+    }
+  }
+
+  &-InfoSectionLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $min-width-tablet) {
+      gap: 30px;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &-InfoSectionRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-Author {
+    color: $color-title;
+    text-wrap: nowrap;
+  }
+
+  &-Date {
+    font-weight: 400;
+    color: $color-text;
+  }
+
+  &-PublisherName {
+    color: $color-title;
+    text-wrap: nowrap;
+    @include hover(color, $color-hover);
+  }
+
+  &-PublisherIcon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    object-position: center;
+
+    @media (min-width: $min-width-tablet) {
+      height: 30px;
+      width: 30px;
+    }
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &-Article {
+    padding-top: 30px;
+    @include fontSize(14px, 400, 16.94px);
+    color: $color-text;
+    border-top: 1px solid $color-border;
+
+    @media (min-width: $min-width-tablet) {
+      @include fontSize(16px, 400, 19.36px);
+      padding-top: 37px;
+    }
+  }
+}

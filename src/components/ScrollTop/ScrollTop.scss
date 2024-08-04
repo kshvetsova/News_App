@@ -1,0 +1,43 @@
+@import "./../styles/main.scss";
+
+.ScrollTop {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  @include imageBackground("../../images/scroll-top-mobile.svg") {
+    background-position: center;
+  }
+
+  @include hover(box-shadow, 0 3px 7px rgba(61, 78, 97, 0.6));
+
+  @media(min-width: $min-width-tablet) {
+    width: 50px;
+    height: 50px;
+
+    @include imageBackground("../../images/scroll-top-tablet.svg") {
+    }
+  }
+
+  @media(min-width: $min-width-laptop) {
+    width: 140px;
+    height: 37px;
+    background-color: $color-hover;
+    border-radius: 5px;
+
+    @include imageBackground("../../images/scroll-top.svg") {
+      background-position: 114px 9px;
+    }
+
+    &::before {
+      position: absolute;
+      content: 'scroll to top';
+      @include fontSize(16px, 700, 19.36px);
+      color: #fff;
+      left: 10px;
+      top: 9px;
+    }
+  }
+}

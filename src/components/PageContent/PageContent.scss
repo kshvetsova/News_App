@@ -1,0 +1,34 @@
+@import "./../styles/main.scss";
+
+.PageContent {
+  &-ScrollTop {
+    position: fixed;
+    z-index: 3;
+    right: $padding-inline-mobile;
+    bottom: 120px;
+
+    @media(min-width: $min-width-tablet) {
+      right: $padding-inline-tablet;
+    }
+
+    @media(min-width: $min-width-laptop) {
+      right: $padding-inline-desktop;
+    }
+  }
+
+  &-Error {
+    @include notification;
+
+    background-color: rgb(248, 215, 219, 0.9);
+    color: rgba(114, 28, 37);
+    box-shadow: 0 3px 8px rgba(114, 28, 37, 0.4);
+  }
+
+  &-Empty {
+    @include notification;
+
+    background-color: rgba(204, 240, 255, 0.9);
+    color: rgb(0, 53, 77);
+    box-shadow: 0 3px 8px rgba(0, 53, 77, 0.4);
+  }
+}

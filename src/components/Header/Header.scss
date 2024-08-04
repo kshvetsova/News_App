@@ -1,0 +1,253 @@
+@import "./../styles/main.scss";
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px $padding-inline-mobile;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(61, 78, 97, 0.2);
+
+  @media(min-width: $min-width-tablet) {
+    padding-inline: $padding-inline-tablet;
+  }
+
+  @media(min-width: $min-width-laptop) {
+    padding-inline: $padding-inline-desktop;
+  }
+
+  &-ContainerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+
+    @media(min-width: $min-width-tablet) {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    &_detail {
+      flex-direction: row;
+    }
+  }
+
+  &-Logo {
+    @include fontSize(20px, 700, 20px);
+    color: $color-hover;
+    width: 100px;
+
+    @include hover(transform, scale(1.2));
+
+    @media(min-width: $min-width-tablet) {
+      line-height: 32px;
+    }
+  }
+
+  &-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 18px;
+    flex-grow: 1;
+
+    @media(min-width: $min-width-tablet) {
+      margin-left: 0;
+    }
+
+    @media(min-width: $min-width-laptop) {
+      flex-direction: row;
+      margin-inline: 60px;
+      justify-content: space-between;
+    }
+
+    @media(min-width: $min-width-desktop) {
+      margin-right: 136px;
+      margin-left: 70px;
+    }
+  }
+
+  &-Nav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5px;
+
+    @media(min-width: $min-width-tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-right: 82px;
+      gap: 60px
+    }
+
+    @media(min-width: $min-width-laptop) {
+      margin-right: 0;
+    }
+
+    &_detail {
+      margin-right: 48px;
+      align-items: flex-end;
+
+      @media(min-width: $min-width-tablet) {
+        margin-right: 60px;
+        justify-content: end;
+        flex-grow: 1;
+        align-items: center;
+      }
+    }
+  }
+
+  &-SearchContainer {
+    width: 100%;
+    max-width: 350px;
+    align-self: center;
+    height: 32px;
+    position: relative;
+  }
+  
+  &-Search {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-inline: 40px;
+    background-color:#f2f2f2;
+    border-radius: 4px;
+
+    @include imageBackground("../../images/search.svg") {
+       background-position: 16px;
+     }
+
+    @include fontSize(14px, 400, 16.94px);
+
+    &:focus {
+      box-shadow: 0 3px 8px rgba(61, 78, 97, 0.4);
+    }
+  }
+
+  &-SearchClose {
+    width: 18px;
+    height: 18px;
+    background-color: #757575;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    margin: auto;
+
+    @include imageBackground("../../images/search-close.svg") {
+      background-position: center;
+    }
+  }
+
+  &:has(.ToggleMenu-Input:checked) .Nav {
+    display: none;
+  }
+}
+
+.Nav {
+  &-List {
+    display: none;
+  }
+
+  &-Categories {
+    position: relative;
+  }
+
+  &-Categories:hover &-TitleList {
+    cursor: pointer;
+    transition: color 0.3s;
+    color: $color-hover;
+  }
+
+  &-Categories:hover &-List {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    left: calc(50% + -113px);
+  }
+
+  .nav-link {
+    @include fontSize(14px, 400, 16.94px);
+  }
+}
+
+.List {
+  width: 220px;
+  height: 113px;
+  padding: 14px 25px;
+
+  @include imageBackground('../../images/categories-bg.png') {
+    background-size: contain;
+    background-position: center;
+  };
+
+  &-Item {
+    position: relative;
+
+    &_active {
+      color: $color-selected;
+    }
+
+    &_active::before {
+      position: absolute;
+      left: -17px;
+      content: '⚡️';
+    }
+  }
+
+  &-Link {
+    @include fontSize(14px, 400, 21px);
+
+    @include hover(color, $color-hover);
+  }
+}
+
+.ToggleMenu {
+  display: flex;
+  width: 18px;
+  height: 20px;
+  align-self: flex-start;
+  
+  @media(min-width: $min-width-tablet) {
+    height: 32px;
+  }
+
+  @include hover(transform, scale(1.2));
+
+  &-Input{
+    display: none;
+  }
+
+  &-Image {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    border-radius: 4px;
+
+    @include imageBackground("../../images/menu-close.svg") {
+      background-position: center;
+    }
+
+    &:hover {
+      @include imageBackground("../../images/menu-close-hover.svg") 
+    }
+  }
+
+  &-Input:checked + &-Image {
+    @include imageBackground("../../images/menu-open.svg");
+
+    &:hover {
+      @include imageBackground("../../images/menu-open-hover.svg");
+    }
+  }
+}
+
+.link {
+  @include hover(color, $color-hover);
+}

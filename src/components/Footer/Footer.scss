@@ -1,0 +1,67 @@
+@import "./../styles/main.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid #e8e8e8;
+  padding: 20px $padding-inline-mobile;
+
+  @media (min-width: $min-width-tablet) {
+    padding-inline: $padding-inline-tablet;
+  }
+
+  @media (min-width: $min-width-laptop) {
+    padding-inline: $padding-inline-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-Copyright {
+    white-space: nowrap;
+    @include fontSize(14px, 400, 18px);
+
+    @media (min-width: $min-width-tablet) {
+      @include fontSize(16px, 400, 20px);
+    }
+  }
+
+  &-Socials {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &-Instagram {
+    @include imageBackground("../../images/instagram.svg");
+
+    @include hover(transform, scale(1.2)) {
+      @include imageBackground("../../images/instagram-hover.svg");
+    }
+  }
+
+  &-Twitter {
+    @include imageBackground("../../images/twitter.svg");
+
+    @include hover(transform, scale(1.2)) {
+      @include imageBackground("../../images/twitter-hover.svg");
+    }
+  }
+
+  &-LinkedIn {
+    @include imageBackground("../../images/linkedin.svg");
+
+    @include hover(transform, scale(1.2)) {
+      @include imageBackground("../../images/linkedin-hover.svg");
+    }
+  }
+}
+
+.socials {
+  width: 22px;
+  height: 18px;
+  background-position: center;
+}

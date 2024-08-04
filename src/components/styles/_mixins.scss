@@ -1,0 +1,46 @@
+@mixin fontSize($size, $weight, $hight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $hight;
+}
+
+@mixin hover($property, $value) {
+  cursor: pointer;
+  transition: $property 0.3s;
+  
+  &:hover {
+    #{$property}: $value;
+
+    @content;
+  }
+}
+
+@mixin imageBackground($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+
+  @content;
+}
+
+@mixin minHightMain {
+  @media(min-width: $min-width-tablet) {
+    min-height: setMinHightMain($hight-footer-tab, $hight-header-tab);
+  }
+
+  @media(min-width: $min-width-laptop) {
+    min-height: setMinHightMain($hight-footer-lap, $hight-header-lap);
+  }
+}
+
+@mixin notification {
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
