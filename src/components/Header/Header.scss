@@ -201,7 +201,7 @@
   }
 
   &-Link {
-    @include fontSize(14px, 400, 21px);
+    @include fontSize(14px, 400, 20px);
 
     @include hover(color, $color-hover);
   }
