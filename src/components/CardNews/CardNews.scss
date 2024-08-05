@@ -34,7 +34,7 @@
   &-Title {
     margin-bottom: 15px;
 
-    @include fontSize(20px, 700, 24.2px);
+    @include fontSize(20px, 700, 24px);
     color: $color-title;
     height: 24px;
     overflow: hidden;
@@ -45,7 +45,7 @@
     height: 85px;
     overflow: hidden;
 
-    @include fontSize(14px, 400, 16.94px);
+    @include fontSize(14px, 400, 17px);
     color: $color-text;
   }
 
