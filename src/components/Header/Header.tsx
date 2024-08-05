@@ -75,7 +75,7 @@ export const Header = () => {
                       key={item}
                       to={{
                         pathname: '/news',
-                        search: getSearchWith(['category', item], searchParams)
+                        search: getSearchWith(['category', item], null)
                       }}
                       className="List-Link link"
                       onClick={() => setQuerySearch('')}

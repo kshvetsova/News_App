@@ -1,6 +1,6 @@
-export const getSearchWith = (data: string[], search: URLSearchParams) => {
+export const getSearchWith = (data: string[], search: URLSearchParams | null) => {
   const [key, value] = data;
-  const newParams = new URLSearchParams(search.toString());
+  const newParams = new URLSearchParams(search?.toString());
 
   if (!value) {
     newParams.delete(key);
