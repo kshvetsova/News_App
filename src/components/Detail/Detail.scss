@@ -83,7 +83,6 @@
 
   &-Author {
     color: $color-title;
-    text-wrap: nowrap;
   }
 
   &-Date {
@@ -117,6 +116,7 @@
     @include fontSize(14px, 400, 16.94px);
     color: $color-text;
     border-top: 1px solid $color-border;
+    word-break: break-word;
 
     @media (min-width: $min-width-tablet) {
       @include fontSize(16px, 400, 19.36px);
