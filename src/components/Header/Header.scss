@@ -197,6 +197,7 @@
       position: absolute;
       left: -17px;
       content: '⚡️';
+      @include fontSize(14px, 400, 20px);
     }
   }
 
