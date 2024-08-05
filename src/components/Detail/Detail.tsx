@@ -25,10 +25,7 @@ export const Detail: React.FC<Props> = ({ article }) => {
           src={thumbnail}
           alt="Article foto"
           className="Detail-Image"
-          onError={(e) => {
-            e.currentTarget.src = URL_IMAGE_ARTICLE;
-            e.currentTarget.style.objectPosition = 'center';
-          }}
+          onError={(e) => e.currentTarget.src = URL_IMAGE_ARTICLE}
         />
       </div>
       <h1 className="Detail-Title">{title}</h1>
@@ -46,7 +43,6 @@ export const Detail: React.FC<Props> = ({ article }) => {
             onError={(e) => {
               e.currentTarget.src = URL_ICON_ARTICLE;
               e.currentTarget.style.backgroundColor = '#e9eef1';
-              '#edeeef';
             }}
           />
         </a>

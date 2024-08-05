@@ -6,6 +6,7 @@
     height: 0;
     padding-bottom: 50%;
     position: relative;
+    background-color: #e9eef1;
     overflow: hidden;
 
     @media (min-width: $min-width-tablet) {
@@ -23,10 +24,6 @@
     position: absolute;
     object-fit: cover;
     object-position: center;
-    @media (min-width: $min-width-laptop) {
-      object-position: center top;
-    }
-
     @include hover(transform, scale(1.2));
   }
 
