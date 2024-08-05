@@ -5,10 +5,11 @@
     position: fixed;
     z-index: 3;
     right: $padding-inline-mobile;
-    bottom: 120px;
+    bottom: 100px;
 
     @media(min-width: $min-width-tablet) {
       right: $padding-inline-tablet;
+      bottom: 120px;
     }
 
     @media(min-width: $min-width-laptop) {

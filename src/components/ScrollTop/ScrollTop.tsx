@@ -1,5 +1,5 @@
 import './ScrollTop.scss';
 
 export const ScrollTop = () => (
-  <a href="#top" className="ScrollTop">{}</a>
+  <div className="ScrollTop" onClick={() => window.scrollTo(0, 0)}>{}</div>
 );

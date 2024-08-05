@@ -179,7 +179,7 @@
 .List {
   width: 220px;
   height: 113px;
-  padding: 14px 25px;
+  padding: 15px 25px 12px;
 
   @include imageBackground('../../images/categories-bg.png') {
     background-size: contain;

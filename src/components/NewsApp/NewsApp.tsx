@@ -12,7 +12,7 @@ export const NewsApp = () => {
 
   return (
     <NewsProvider>
-      <div className="NewsApp NewsApp" id="top">
+      <div className="NewsApp NewsApp">
         <div className="NewsApp-Header">
           <Header />
         </div>
