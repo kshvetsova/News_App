@@ -34,7 +34,7 @@ export const Detail: React.FC<Props> = ({ article }) => {
           <p className="Detail-Author">Written by {authors[0] || 'an unknouwn author'}</p>
           <p className="Detail-Date">{setArticleDate(date)}</p>
         </div>
-        <a href={url} className="Detail-InfoSectionRight">
+        <a href={url} target="_blank" className="Detail-InfoSectionRight">
           <p className="Detail-PublisherName">{name}</p>
           <img
             src={favicon}
